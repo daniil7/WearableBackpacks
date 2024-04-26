@@ -1,69 +1,59 @@
 buildscript {
-  repositories {
-    jcenter()
-    maven { url = 'http://files.minecraftforge.net/maven' }
-  }
-  dependencies {
-    classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-  }
+	repositories {
+		mavenCentral()
+		maven { url = "https://maven.minecraftforge.net/" }
+	}
+	dependencies {
+		classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+"
+	}
 }
 
-apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: "java"
+apply plugin: "net.minecraftforge.gradle"
 
-version = mod_version
-group = 'net.mcft.copy.backpacks'
-archivesBaseName = "${rootProject.name}-$mc_version"
-sourceCompatibility = JavaVersion.VERSION_1_8
-
-minecraft {
-  version = forge_version
-  mappings = mcp_mappings
-  runDir = 'run'
-  replace '@VERSION@', project.version
-}
-
-jar {
-  from sourceSets.main.output
-  from sourceSets.api.output
+java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+compileJava {
+	sourceCompatibility = "8"
+	targetCompatibility = "8"
 }
 
 repositories {
-  ivy {
-    name 'asie dependency mirror'
-    artifactPattern 'http://asie.pl/javadeps/[module]-[revision](-[classifier]).[ext]'
-  }
+	maven {
+		url = "https://maven.minecraftforge.net/"
+	}
+	flatDir {
+		dirs("src/libs")
+	}
 }
 
 dependencies {
-  deobfCompile name: 'InventoryTweaks', version: "$invtweaks_version-api"
+	minecraft "net.minecraftforge:forge:1.12.2-14.23.5.2860"
+	implementation name:"InventoryTweaks-deobf-1.58-147"
+}
+
+minecraft {
+	mappings channel: "stable", version: "39-1.12"
+	runs {
+		"client" {
+			workingDirectory file("./run")
+			mods { "${project.name}" { source sourceSets.main } }
+		}
+		
+		"server" {
+			workingDirectory file("./run/server")
+			mods { "${project.name}" { source sourceSets.main } }
+		}
+	}
 }
 
 processResources {
-  inputs.property 'mod_version', project.version
-  inputs.property "mc_version", mc_version
-
-  from(sourceSets.main.resources.srcDirs) {
-    include 'mcmod.info'
-    expand mod_version: project.version, mc_version: mc_version
-  }
-
-  from(sourceSets.main.resources.srcDirs) {
-    exclude "mcmod.info"
-  }
+	inputs.property "version", project.version
+	
+	filesMatching("mcmod.info") {
+		expand "version": project.version
+	}
 }
 
-task sourcesJar(type: Jar) {
-  classifier = 'sources'
-  from sourceSets.main.allJava
-  from sourceSets.api.allJava
-}
-
-task apiJar(type: Jar) {
-  classifier = 'api'
-  from sourceSets.api.output
-}
-
-artifacts {
-  archives sourcesJar
-  archives apiJar
-}
+//When Forge 1.12 loads mods from a directory that's been put on the classpath, it expects to find resources in the same directory.
+//Default Gradle behavior puts resources in ./build/resources/main instead of ./build/classes/main/java. Let's change that.
+sourceSets.all { it.output.resourcesDir = it.output.classesDirs.getFiles().iterator().next() }
