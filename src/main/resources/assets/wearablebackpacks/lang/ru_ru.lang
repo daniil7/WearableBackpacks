@@ -35,8 +35,6 @@ config.wearablebackpacks.backpack.enabled=Разрешено
 config.wearablebackpacks.backpack.enabled.tooltip=Разрешает рюкзаки.
 config.wearablebackpacks.backpack.durability=Прочность
 config.wearablebackpacks.backpack.durability.tooltip=Задаёт прочность рюкзака (0 - неразрушимый).
-config.wearablebackpacks.backpack.armor=Защита
-config.wearablebackpacks.backpack.armor.tooltip=Очки защиты рюкзака.
 config.wearablebackpacks.backpack.size=Вместимость
 config.wearablebackpacks.backpack.size.tooltip=Задаёт вместимость рюкзака. Не влияет на уже существующие поставленные или надетые рюкзаки, нужно взять в руки для изменения.
 
@@ -44,8 +42,6 @@ config.wearablebackpacks.category.entity=Настройки мобов
 config.wearablebackpacks.category.entity.tooltip=Управляет настройками носимых рюкзаков
 config.wearablebackpacks.entity.spawnNaturally=Появление мобов в мире
 config.wearablebackpacks.entity.spawnNaturally.tooltip=Задаёт, могут ли случайные мобы в мире появляться с рюкзаками
-config.wearablebackpacks.entity.spawnFromSpawners=Появление мобов от спаунера
-config.wearablebackpacks.entity.spawnFromSpawners.tooltip=Задаёт, могут ли случайные мобы из спаунеров появляться с рюкзаками
 config.wearablebackpacks.entity.list=Список мобов
 config.wearablebackpacks.entity.entry=%1$s мобов
 config.wearablebackpacks.entity.entry.0=Нет записей!

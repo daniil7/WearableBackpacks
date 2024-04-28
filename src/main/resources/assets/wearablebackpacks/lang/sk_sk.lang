@@ -38,8 +38,6 @@ config.wearablebackpacks.backpack.enabled=Povolené
 config.wearablebackpacks.backpack.enabled.tooltip=Ovláda či je klasický ruksak Povolený.
 config.wearablebackpacks.backpack.durability=Výdrž
 config.wearablebackpacks.backpack.durability.tooltip=Ovláda výdrž klasického ruksaku. (0 pre nezničiteľný).
-config.wearablebackpacks.backpack.armor=Brnenie
-config.wearablebackpacks.backpack.armor.tooltip=Body Brnenia klasického Ruksaku.
 config.wearablebackpacks.backpack.size=Veľkosť úložného priestoru
 config.wearablebackpacks.backpack.size.tooltip=Ovláda úložný priestor klasického ruksaku. Neovplyvni už položené alebo nasadené ruksaky, zmeň ich znova na item pre aplikovanie zmien.
 
@@ -47,8 +45,6 @@ config.wearablebackpacks.category.entity=Nastavenia Entít
 config.wearablebackpacks.category.entity.tooltip=Ovláda nastavenia týkajúce sa entít nosiacih ruksak.
 config.wearablebackpacks.entity.spawnNaturally=Prirodzený Spawn
 config.wearablebackpacks.entity.spawnNaturally.tooltip=Ovláda či prirodzene spawnutý mob môže mať náhodnú šancu pre nosenie ruksaku.
-config.wearablebackpacks.entity.spawnFromSpawners=Spawn Zo Spawnerov
-config.wearablebackpacks.entity.spawnFromSpawners.tooltip=Ovláda či Mob spawnutý zo spawnera, môže mať šancu pre nosenie ruksaku.
 config.wearablebackpacks.entity.list=Záznamy o Entitách
 config.wearablebackpacks.entity.entry=%1$s entít
 config.wearablebackpacks.entity.entry.1=1 ent

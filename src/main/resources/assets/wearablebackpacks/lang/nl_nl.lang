@@ -36,8 +36,6 @@ config.wearablebackpacks.backpack.enabled=Ingeschakeld
 config.wearablebackpacks.backpack.enabled.tooltip=Bepaalt of de normale rugzak is ingeschakeld.
 config.wearablebackpacks.backpack.durability=Duurzaamheid
 config.wearablebackpacks.backpack.durability.tooltip=Regelt de duurzaamheid van de normale rugzak (0 voor onbreekbaar).
-config.wearablebackpacks.backpack.armor=Harnas
-config.wearablebackpacks.backpack.armor.tooltip=Pantserpunten van normale rugzakken.
 config.wearablebackpacks.backpack.size=Opslag Grootte
 config.wearablebackpacks.backpack.size.tooltip=Bepaalt de opslag grootte van normale rugzakken. Heeft geen invloed op geplaatste of uitgeruste rugzakken.
 
@@ -45,8 +43,6 @@ config.wearablebackpacks.category.entity=Entiteitsinstellingen
 config.wearablebackpacks.category.entity.tooltip=Regelt de instellingen van entiteiten die rugzakken dragen
 config.wearablebackpacks.entity.spawnNaturally=Verschijnt normaal
 config.wearablebackpacks.entity.spawnNaturally.tooltip=Bepaalt of wezens die op natuurlijke wijze verschijnen een willekeurig rugzak kunnen dragen
-config.wearablebackpacks.entity.spawnFromSpawners=Verschijnt door Monsterkooien
-config.wearablebackpacks.entity.spawnFromSpawners.tooltip=Bepaalt of wezens die verschijnen van Monsterkooien een willekeurig rugzak kunnen dragen
 config.wearablebackpacks.entity.list=Entiteitsvermeldingen
 config.wearablebackpacks.entity.entry=%1$s vermeldingen
 config.wearablebackpacks.entity.entry.0=Geen vermeldingen!

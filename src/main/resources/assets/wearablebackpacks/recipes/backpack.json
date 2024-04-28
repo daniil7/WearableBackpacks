@@ -8,7 +8,11 @@
 	"key": {
 		"L": { "type": "forge:ore_dict", "ore": "leather" },
 		"G": { "type": "forge:ore_dict", "ore": "ingotGold" },
-		"W": { "item": "minecraft:wool", "data": 32767 }
+		"W": { "item": "minecraft:wool", "data": 0 }
 	},
-	"result": { "item": "wearablebackpacks:backpack" }
+	"result": {
+		"item": "wearablebackpacks:backpack",
+		"data": 0,
+		"count": 1
+	}
 }

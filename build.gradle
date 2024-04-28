@@ -29,6 +29,7 @@ repositories {
 dependencies {
 	minecraft "net.minecraftforge:forge:1.12.2-14.23.5.2860"
 	implementation name:"InventoryTweaks-deobf-1.58-147"
+	implementation name:"Baubles_1.12_1.5.2"
 }
 
 minecraft {

@@ -38,8 +38,6 @@ config.wearablebackpacks.backpack.enabled=Vključeno
 config.wearablebackpacks.backpack.enabled.tooltip=Kontrolira če je navaden nahrbtnik Vključen.
 config.wearablebackpacks.backpack.durability=Trajnost
 config.wearablebackpacks.backpack.durability.tooltip=Kontrolira trajnost navadnega nahrbtnika (0 za neuničljivo).
-config.wearablebackpacks.backpack.armor=Zasčita
-config.wearablebackpacks.backpack.armor.tooltip=Zasčitna vrednost navadnega nahrbtnika.
 config.wearablebackpacks.backpack.size=Velikost nahrbtnika
 config.wearablebackpacks.backpack.size.tooltip=Kontrolira koliko stvari lahko das v nahrbtnik. Ne deluje za ze obstoječime nahrbtnike.
 
@@ -47,8 +45,6 @@ config.wearablebackpacks.category.entity=Entitetne Nastavitve
 config.wearablebackpacks.category.entity.tooltip=Kontrolira nastavitve o entitetah, ki imajo nahrbtnike.
 config.wearablebackpacks.entity.spawnNaturally=Naravno pojavljene entitete
 config.wearablebackpacks.entity.spawnNaturally.tooltip=Kontrolira če imajo naravno pojavljene entitete nahrbtnik.
-config.wearablebackpacks.entity.spawnFromSpawners=Ustvarjene entitete
-config.wearablebackpacks.entity.spawnFromSpawners.tooltip=Kontrolira če imajo ustvarjene entitete nahrbtnik.
 config.wearablebackpacks.entity.list=Vnosi entitet
 config.wearablebackpacks.entity.entry=%1$s vnosov
 config.wearablebackpacks.entity.entry.0=Ni vnosov!

@@ -38,8 +38,6 @@ config.wearablebackpacks.backpack.enabled=Włączone
 config.wearablebackpacks.backpack.enabled.tooltip=Kontroluje, czy zwykłe plecaki są włączone.
 config.wearablebackpacks.backpack.durability=Wytrzymałość
 config.wearablebackpacks.backpack.durability.tooltip=Kontroluje wytrzymałość zwykłych plecaków (0 oznacza niezniczalne).
-config.wearablebackpacks.backpack.armor=Pancerz
-config.wearablebackpacks.backpack.armor.tooltip=Punkty pancerza zwykłych plecaków.
 config.wearablebackpacks.backpack.size=Wielkość inwentarza
 config.wearablebackpacks.backpack.size.tooltip=Kontroluje rozmiar ekwipunku zwykłych plecaków. Nie ma efektu na obecnie postawionych lub noszonych plecakach, zmień je spowrotem w przedmiot.
 
@@ -47,8 +45,6 @@ config.wearablebackpacks.category.entity=Ustawienia bytów (Mobów)
 config.wearablebackpacks.category.entity.tooltip=Kontroluje ustawienia dotyczące bytów noszących plecaki
 config.wearablebackpacks.entity.spawnNaturally=Spawnuj naturalnie
 config.wearablebackpacks.entity.spawnNaturally.tooltip=Kontroluje, czy naturalnie spawnowane byty mają losową szansę na noszenie plecaka
-config.wearablebackpacks.entity.spawnFromSpawners=Spawnuj ze Spawnerów
-config.wearablebackpacks.entity.spawnFromSpawners.tooltip=Kontroluje, czy byty spawnowane w spawnerach mają szansę na noszenie plecaka
 config.wearablebackpacks.entity.list=Lista bytów
 config.wearablebackpacks.entity.entry=%1$s wpisów
 config.wearablebackpacks.entity.entry.0=Brak wpisów!

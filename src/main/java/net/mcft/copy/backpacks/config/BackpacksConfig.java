@@ -46,8 +46,8 @@ public class BackpacksConfig {
 	public final Setting<Boolean> enableEquippedInteraction = new SettingBoolean(true)
 		.setComment("If enabled, allows equipped backpacks to be opened by other players by right clicking the target's back. Default: true.");
 	
-	public final Setting<Boolean> enableSelfInteraction = new SettingBoolean(false).setSynced()
-		.setComment("If enabled, allows players to open their own equipped backpack without requiring it to be placed first using a keybind. Default: false.");
+	public final Setting<Boolean> enableSelfInteraction = new SettingBoolean(true).setSynced()
+		.setComment("If enabled, allows players to open their own equipped backpack without requiring it to be placed first using a keybind. Default: true.");
 	
 		public final Setting<Boolean> enableMachineInteraction = new SettingBoolean(false)
 		.setComment("If enabled, allows machines to interact with placed backpacks. Default: false.");
@@ -63,17 +63,11 @@ public class BackpacksConfig {
 		public final Setting<Boolean> enabled = new SettingBoolean(true)
 			.setRequiresMinecraftRestart();
 		
-		public final Setting<Integer> durability = new SettingInteger(214).setValidRange(0, 32000)
+		public final Setting<Integer> durability = new SettingInteger(0).setValidRange(0, 32000)
 			.setRequired(enabled).setRecommended(equipAsChestArmor, "chestplate")
 			.setSynced(setting -> BackpacksContent.BACKPACK.setMaxDamage(setting.get()))
-			.setComment("Durability of a normal backpack. Set to 0 for unbreakable. Default: 214.");
-		
-		public final Setting<Integer> armor = new SettingInteger(2).setValidRange(0, 20)
-			.setRequired(enabled).setRecommended(equipAsChestArmor, "chestplate").setSynced()
-			.setConfigEntryClass("net.mcft.copy.backpacks.client.gui.config.custom.EntryValueArmor")
-			.setComment("Armor points of a normal backpack. Valid values are 0 to 20. Default: 2.\n" +
-			            "Has no effect if equipAsChestArmor is disabled.");
-		
+			.setComment("Durability of a normal backpack. Set to 0 for unbreakable. Default: 0.");
+				
 		public final Setting<BackpackSize> size = new SettingBackpackSize(9, 4).setRequired(enabled)
 			.setComment("Storage size of a normal backpack. Valid values are [1x1] to [17x6]. Default: [9x4].\n" +
 			            "Changing this doesn't affect placed or equipped backpacks until turned back into an item.");
@@ -84,12 +78,6 @@ public class BackpacksConfig {
 	
 	public EntityCategory entity;
 	public class EntityCategory {
-		
-		public final Setting<Boolean> spawnNaturally = new SettingBoolean(true)
-			.setComment("Controls whether mobs spawned naturally can randomly be wearing backpacks.");
-		
-		public final Setting<Boolean> spawnFromSpawners = new SettingBoolean(false)
-			.setComment("Controls whether mobs spawned from spawners can randomly be wearing backpacks.");
 		
 		public final SettingListEntities list = new SettingListEntities();
 		

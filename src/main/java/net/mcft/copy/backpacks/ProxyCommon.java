@@ -6,6 +6,10 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+import baubles.api.BaubleType;
+import baubles.api.BaublesApi;
+import baubles.api.cap.BaubleItem;
+import baubles.api.cap.IBaublesItemHandler;
 import net.mcft.copy.backpacks.misc.util.MiscUtils;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
@@ -100,56 +104,9 @@ public class ProxyCommon {
 
 	@SubscribeEvent
 	public void onCheckSpawn(CheckSpawn event) {
-		// When a mob is about to spawn, see if it has a chance to wear a backpack.
-		if (!(event.isSpawner() ? WearableBackpacks.CONFIG.entity.spawnFromSpawners
-		                        : WearableBackpacks.CONFIG.entity.spawnNaturally).get()) return;
-		EntityLivingBase entity = event.getEntityLiving();
-
-		for (BackpackEntry entry : BackpackRegistry.getBackpackEntries(entity.getClass())) {
-			if ((entry.chance == 0) || (entity.world.rand.nextDouble() > (1.0 / entry.chance))) continue;
-			BackpackCapability backpack = (BackpackCapability)entity.getCapability(IBackpack.CAPABILITY, null);
-			// Set the backpack capability of the entity to spawn with the specified backpack.
-			// This will be delayed until the first update tick to fire after armor has been generated.
-			backpack.spawnWith = entry;
-			break;
-		}
 	}
 	/** Called when a mob spawns with a backpack with a 1 tick delay. */
 	private void onSpawnedWith(EntityLivingBase entity, BackpackCapability backpack, BackpackEntry entry) {
-		ItemStack stack = new ItemStack(entry.getBackpackItem());
-
-		if (entry.colorRange != null) // Set a random color!
-			NbtUtils.set(stack, entry.colorRange.getRandom(), "display", "color");
-
-		// Set damage to a random amount (25% - 75%).
-		int maxDamage = stack.getMaxDamage();
-		int damage = maxDamage / 4 + ((maxDamage / 2 > 0)
-			? entity.world.rand.nextInt(maxDamage / 2) : 0);
-		stack.setItemDamage(damage);
-
-		if (BackpackHelper.equipAsChestArmor) {
-			// If the entity spawned with enchanted armor,
-			// then move over all compatible enchantments.
-			ItemStack armor = entity.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
-			if ((armor != null) && armor.isItemEnchanted()) {
-				NBTTagList enchList = armor.getEnchantmentTagList();
-				for (int i = 0; i < enchList.tagCount(); ++i) {
-					NBTTagCompound enchTag = enchList.getCompoundTagAt(i);
-					Enchantment enchantment = Enchantment.getEnchantmentByID(enchTag.getShort("id"));
-					// If the enchantment doesn't work with the backpack, remove it.
-					if (!enchantment.canApply(stack)) enchList.removeTag(i--);
-				}
-				if (enchList.tagCount() > 0)
-					NbtUtils.set(stack, enchList, "ench");
-			}
-		}
-
-		IBackpackType type = entry.getBackpackItem();
-		IBackpackData data = type.createBackpackData(stack);
-		BackpackHelper.setEquippedBackpack(entity, stack, data);
-		type.onSpawnedWith(entity, backpack, entry.lootTable);
-		backpack.spawnWith  = null;
-		backpack.mayDespawn = true;
 	}
 
 	private boolean cancelOffHand = false;
@@ -240,8 +197,9 @@ public class ProxyCommon {
 		boolean hasBackpack = !backpack.getStack().isEmpty();
 
 		if (backpack.isChestArmor()) {
-			if (entity instanceof EntityPlayer)
-				SlotBackpackWrapper.replace((EntityPlayer)entity, backpack.getStack());
+
+			// There was a logic that prevents unexpacted unequipping.
+			// Now Baubles care about this. There was a conflict with boubles logic.
 
 			if (!hasBackpack) {
 				// Backpack has been removed somehow.

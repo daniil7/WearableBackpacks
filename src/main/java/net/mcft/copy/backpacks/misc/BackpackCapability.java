@@ -58,8 +58,9 @@ public class BackpackCapability implements IBackpack {
 	
 	/** Returns if the entity is wearing the backpack in the chest armor slot. */
 	public boolean isChestArmor() {
-		return ((lastType != null) || (BackpackHelper.getBackpackType(
-			entity.getItemStackFromSlot(EntityEquipmentSlot.CHEST)) != null));
+		return (lastType != null)
+			|| (BackpackHelper.getBackpackType(
+					BackpackHelper.getBodyBoubleFromEntity(entity)) != null);
 	}
 	
 	// IBackpack implementation
@@ -67,7 +68,7 @@ public class BackpackCapability implements IBackpack {
 	@Override
 	public ItemStack getStack() {
 		if (!stack.isEmpty()) return stack;
-		ItemStack chestArmor = entity.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
+		ItemStack chestArmor = BackpackHelper.getBodyBoubleFromEntity(entity);
 		return ((BackpackHelper.getBackpackType(chestArmor) != null) ? chestArmor : ItemStack.EMPTY);
 	}
 	
@@ -83,7 +84,7 @@ public class BackpackCapability implements IBackpack {
 		if (setChestArmor) {
 			stack = ItemStack.EMPTY;
 			lastType = BackpackHelper.getBackpackType(value);
-			entity.setItemStackToSlot(EntityEquipmentSlot.CHEST, value);
+			BackpackHelper.setBodyBoubleForEntity(entity, value);
 			
 			// Send the updated equipment to all players.
 			if (entity instanceof EntityPlayer)
@@ -214,7 +215,7 @@ public class BackpackCapability implements IBackpack {
 			IBackpackType type;
 			if (stack.isEmpty()) {
 				// Try to get the backpack type from the chestplate slot.
-				stack = backpack.entity.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
+				stack = BackpackHelper.getBodyBoubleFromEntity(backpack.entity);
 				backpack.lastType = type = BackpackHelper.getBackpackType(stack);
 				if (type == null) return; // No backpack equipped.
 			} else type = BackpackHelper.getBackpackType(stack);

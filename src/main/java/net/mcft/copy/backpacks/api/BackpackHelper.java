@@ -1,8 +1,13 @@
 package net.mcft.copy.backpacks.api;
 
+import org.apache.http.entity.EntityTemplate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import baubles.api.BaubleType;
+import baubles.api.BaublesApi;
+import baubles.api.cap.IBaublesItemHandler;
+import baubles.api.inv.BaublesInventoryWrapper;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
@@ -43,7 +48,21 @@ public final class BackpackHelper {
 	
 	public static Logger LOG = LogManager.getLogger("wearablebackpacks:api");
 	
-	
+	public static ItemStack getBodyBoubleFromEntity(Entity entity) {
+		if (entity instanceof EntityPlayer) {
+			IBaublesItemHandler baubles = BaublesApi.getBaublesHandler((EntityPlayer)entity);
+			return baubles.getStackInSlot(BaubleType.BODY.getValidSlots()[0]);
+		}
+		return ItemStack.EMPTY;
+	}
+
+	public static void setBodyBoubleForEntity(Entity entity, ItemStack item) {
+		if (entity instanceof EntityPlayer) {
+			IBaublesItemHandler baubles = BaublesApi.getBaublesHandler((EntityPlayer)entity);
+			baubles.setStackInSlot(BaubleType.BODY.getValidSlots()[0], item);
+		}
+	}
+
 	/** Returns the entity's backpack capability, or null if the
 	 *  entity either can't or currently doesn't have one equipped. */
 	public static IBackpack getBackpack(Entity entity) {
@@ -69,9 +88,9 @@ public final class BackpackHelper {
 	public static boolean canEquipBackpack(EntityLivingBase entity) {
 		return (entity.getCapability(IBackpack.CAPABILITY, null) != null) // Has backpack capability.
 			&& (getBackpack(entity) == null)                              // Doesn't currently have backpack equipped.
-			&& !(equipAsChestArmor && (entity instanceof EntityPlayer)    // Isn't wearing a chestplate while equipAsChestArmor is on.
-				&& !entity.getItemStackFromSlot(EntityEquipmentSlot.CHEST).isEmpty());
+			&& !(equipAsChestArmor && !getBodyBoubleFromEntity(entity).isEmpty());
 		// FIXME: How does this work with non-player entities? Do / should they always wear backpacks as armor or what?
+		// Answer: no way
 	}
 	
 	/** Sets the entity's equipped backpack and data. */

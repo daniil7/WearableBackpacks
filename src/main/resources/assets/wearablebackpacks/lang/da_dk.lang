@@ -36,8 +36,6 @@ config.wearablebackpacks.backpack.enabled=Slået til
 config.wearablebackpacks.backpack.enabled.tooltip=Styrer om den normale rygsæk er slået til.
 config.wearablebackpacks.backpack.durability=Holdbarhed
 config.wearablebackpacks.backpack.durability.tooltip=Styrer holdbarheden for den normale rygsæk (0 kan ikke ødelægges).
-config.wearablebackpacks.backpack.armor=Armor
-config.wearablebackpacks.backpack.armor.tooltip=Armor point for normale rygsække.
 config.wearablebackpacks.backpack.size=Opbevarelsesplads
 config.wearablebackpacks.backpack.size.tooltip=Styrer opbevarelsespladsen for normale rygsække. Ændrer ikke rygsække som allerede er på ryggen eller på jorden. Lav dem tilbage til en item for at få ændringerne med.
 
@@ -45,8 +43,6 @@ config.wearablebackpacks.category.entity=Mob Instillinger
 config.wearablebackpacks.category.entity.tooltip=Styrer instillinger for mobs med rygsække på
 config.wearablebackpacks.entity.spawnNaturally=Spawn Naturligt
 config.wearablebackpacks.entity.spawnNaturally.tooltip=Styrer om mobs, der spawner naturligt, kan spawne med rygsække på
-config.wearablebackpacks.entity.spawnFromSpawners=Spawn fra Spawners
-config.wearablebackpacks.entity.spawnFromSpawners.tooltip=Styrer om mobs, der spawner fra mob spawners, kan spawne med rygsække på
 config.wearablebackpacks.entity.entries=Mob-tilfælde
 config.wearablebackpacks.entity.entry=%1$s tilfælde
 config.wearablebackpacks.entity.entry.0=Ingen tilfælde!

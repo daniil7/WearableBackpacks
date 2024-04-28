@@ -14,8 +14,10 @@ import net.mcft.copy.backpacks.network.BackpacksChannel;
 
 // TODO: Add achievement(s)! <3
 
-@Mod(modid = WearableBackpacks.MOD_ID, name = WearableBackpacks.MOD_NAME,
-     version = WearableBackpacks.VERSION, dependencies = "required-after:forge@[14.21.0.2375,)",
+@Mod(modid = WearableBackpacks.MOD_ID,
+	 name = WearableBackpacks.MOD_NAME,
+     version = WearableBackpacks.VERSION,
+	 dependencies = "required-after:forge@[14.21.0.2375,);required-after:baubles@[1.5.2,)",
      guiFactory = "net.mcft.copy.backpacks.client.BackpacksGuiFactory")
 public class WearableBackpacks {
 	
