@@ -1,3 +1,8 @@
+# Форк мода WearableBackpacks 1.12.2
+
+Цель форка - изменить рюкзак так, чтобы он экипировался в слот, предоставляемый модом Baubles.
+Рюкзак перестаёт быть бронёй и становится бижутерией, не даёт очки защиты, не ломается.
+
 # Wearable Backpacks
 
 .. is a Minecraft mod which adds **backpacks**. But wait! It's not like anything you've
