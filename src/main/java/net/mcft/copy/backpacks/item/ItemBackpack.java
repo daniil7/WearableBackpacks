@@ -47,7 +47,7 @@ import java.util.List;
 //                 if there's already a non-full stack of it in the backpack, if so pick it up into the backpack.
 public class ItemBackpack extends Item implements IBauble, IBackpackType, IDyeableItem {
 
-	// START Baubles methods
+	// IBauble implementation
 
 	@Override
 	public BaubleType getBaubleType(ItemStack itemstack) {
@@ -64,24 +64,7 @@ public class ItemBackpack extends Item implements IBauble, IBackpackType, IDyeab
 		return true;
 	}
 
-	@Override
-	public boolean willAutoSync(ItemStack itemstack, EntityLivingBase player) {
-		return false;
-	}
-
-	@Override
-	public void onEquipped(ItemStack itemstack, EntityLivingBase player) {
-	}
-
-	@Override
-	public void onUnequipped(ItemStack itemstack, EntityLivingBase player) {
-	}
-
-	@Override
-	public void onWornTick(ItemStack itemstack, EntityLivingBase player) {
-	}
-
-	// END   Baubles methods
+	// END IBauble implementation
 	
 	public static final int DEFAULT_COLOR = 0xA06540;
 	public static final ResourceLocation LOOT_TABLE =
