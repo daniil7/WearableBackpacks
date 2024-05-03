@@ -10,13 +10,11 @@ tooltip.wearablebackpacks.unequipHint=빈손으로 살금살금 자세로\n바�
 tooltip.wearablebackpacks.used=지금 가방을 사용 중입니다.
 
 chat.wearablebackpacks.cantEquip=가방을 이미 매고 있습니다.
-chat.wearablebackpacks.cantEquip.chestplate=갑옷을 입은 채로 가방을 맬 수 없습니다.
+chat.wearablebackpacks.cantEquip.trinket=갑옷을 입은 채로 가방을 맬 수 없습니다.
 
 key.wearablebackpacks.open=가방 열기
 
 
-# config.wearablebackpacks.general.equipAsChestArmor=Equip as Chest Armor
-# config.wearablebackpacks.general.equipAsChestArmor.tooltip=Controls whether equipped backpacks take up the chest armor equipment slot.
 # config.wearablebackpacks.general.enableEquippedInteraction=Enable Equipped Interaction
 # config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Controls whether players can access equipped backpacks on other players (and entities).
 # config.wearablebackpacks.general.enableSelfInteraction=Enable Self Interaction
@@ -26,15 +24,11 @@ key.wearablebackpacks.open=가방 열기
 
 # config.wearablebackpacks.general.status.outOfRange=Value is out of range (%1$s - %1$s).
 # config.wearablebackpacks.general.status.required=Setting "%1$s" is required for this setting.
-# config.wearablebackpacks.general.status.chestplate=No effect if not equipped as armor. [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=가방 설정
 # config.wearablebackpacks.category.backpack.tooltip=Controls settings regarding regular backpacks.
 # config.wearablebackpacks.backpack.enabled=Enabled
 # config.wearablebackpacks.backpack.enabled.tooltip=Controls whether the regular backpack is enabled.
-# config.wearablebackpacks.backpack.durability=Durability
-# config.wearablebackpacks.backpack.durability.tooltip=Controls the durability of the regular backpack (0 for unbreakable).
-# config.wearablebackpacks.backpack.durability.hint=No effect if not equipped as armor.
 # config.wearablebackpacks.backpack.size=Storage Size
 # config.wearablebackpacks.backpack.size.tooltip=Controls the storage size of regular backpacks. Does not affect currently placed or equipped backpacks, turn them back into an item to apply changes.
 

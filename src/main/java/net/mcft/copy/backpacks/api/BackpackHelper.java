@@ -42,10 +42,7 @@ public final class BackpackHelper {
 	public static double INTERACT_MAX_DISTANCE = 1.8;
 	/** The maximum angle from which an equipped backpack can be opened. */
 	public static double INTERACT_MAX_ANGLE = 110;
-	
-	/** Controlled by a WearableBackpacks config setting. Don't change this, please. */
-	public static boolean equipAsChestArmor = true;
-	
+		
 	public static Logger LOG = LogManager.getLogger("wearablebackpacks:api");
 	
 	public static ItemStack getBodyBoubleFromEntity(Entity entity) {
@@ -83,12 +80,11 @@ public final class BackpackHelper {
 		{ return (item instanceof IBackpackType) ? (IBackpackType)item : null; }
 	
 	/** Returns if the entity can equip a backpack right now.
-	 *  Requires the entity to be able to wear backpacks, not currently have a backpack equipped, and
-	 *  if {@link equipAsChestArmor} is true and the entity is a player, an empty chest armor slot. */
+	 *  Requires the entity to be able to wear backpacks, not currently have a backpack equipped, and */
 	public static boolean canEquipBackpack(EntityLivingBase entity) {
 		return (entity.getCapability(IBackpack.CAPABILITY, null) != null) // Has backpack capability.
 			&& (getBackpack(entity) == null)                              // Doesn't currently have backpack equipped.
-			&& !(equipAsChestArmor && !getBodyBoubleFromEntity(entity).isEmpty());
+			&& getBodyBoubleFromEntity(entity).isEmpty();
 		// FIXME: How does this work with non-player entities? Do / should they always wear backpacks as armor or what?
 		// Answer: no way
 	}

@@ -26,11 +26,8 @@ import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientDisconnection
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import net.mcft.copy.backpacks.BackpacksContent;
 import net.mcft.copy.backpacks.WearableBackpacks;
-import net.mcft.copy.backpacks.api.BackpackHelper;
 import net.mcft.copy.backpacks.config.custom.SettingBackpackSize;
-import net.mcft.copy.backpacks.config.custom.SettingListEntities;
 import net.mcft.copy.backpacks.config.custom.SettingPercent;
 import net.mcft.copy.backpacks.misc.BackpackSize;
 import net.mcft.copy.backpacks.network.MessageSyncSettings;
@@ -38,11 +35,7 @@ import net.mcft.copy.backpacks.network.MessageSyncSettings;
 public class BackpacksConfig {
 	
 	// ==[ GENERAL ]==
-	
-	public final Setting<Boolean> equipAsChestArmor = new SettingBoolean(true)
-		.setSynced(setting -> BackpackHelper.equipAsChestArmor = setting.get())
-		.setComment("If disabled, backpacks do not take up the player's chest armor equipment slot. Default: true.");
-	
+		
 	public final Setting<Boolean> enableEquippedInteraction = new SettingBoolean(true)
 		.setComment("If enabled, allows equipped backpacks to be opened by other players by right clicking the target's back. Default: true.");
 	
@@ -62,27 +55,13 @@ public class BackpacksConfig {
 		
 		public final Setting<Boolean> enabled = new SettingBoolean(true)
 			.setRequiresMinecraftRestart();
-		
-		public final Setting<Integer> durability = new SettingInteger(0).setValidRange(0, 32000)
-			.setRequired(enabled).setRecommended(equipAsChestArmor, "chestplate")
-			.setSynced(setting -> BackpacksContent.BACKPACK.setMaxDamage(setting.get()))
-			.setComment("Durability of a normal backpack. Set to 0 for unbreakable. Default: 0.");
-				
+						
 		public final Setting<BackpackSize> size = new SettingBackpackSize(9, 4).setRequired(enabled)
 			.setComment("Storage size of a normal backpack. Valid values are [1x1] to [17x6]. Default: [9x4].\n" +
 			            "Changing this doesn't affect placed or equipped backpacks until turned back into an item.");
 		
 	}
-	
-	// ==[ ENTITY ]==
-	
-	public EntityCategory entity;
-	public class EntityCategory {
 		
-		public final SettingListEntities list = new SettingListEntities();
-		
-	}
-	
 	// ==[ COSMETIC ]==
 	
 	@SideOnly(Side.CLIENT)

@@ -10,15 +10,13 @@ tooltip.wearablebackpacks.unequipHint=潜行时空手右击地面即可卸下。
 tooltip.wearablebackpacks.used=有玩家正在查看此背包。
 
 chat.wearablebackpacks.cantEquip=你最多只能装备一个背包！
-chat.wearablebackpacks.cantEquip.chestplate=你不能在身着护甲时装备背包！
+chat.wearablebackpacks.cantEquip.trinket=你不能在身着护甲时装备背包！
 
 key.wearablebackpacks.open=打开背包
 
 
 config.wearablebackpacks.gui.cancel=取消
 
-config.wearablebackpacks.general.equipAsChestArmor=护甲式背包
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=启用此选项后，背包可以当作普通护甲，并装备于玩家的护甲格。
 config.wearablebackpacks.general.enableEquippedInteraction=玩家间可互相交互
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=启用此选项后，玩家可直接打开其他玩家或实体身上的背包。
 config.wearablebackpacks.general.enableSelfInteraction=快速访问背包
@@ -30,14 +28,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=启用此选项后�
 
 config.wearablebackpacks.general.status.outOfRange=数值越界（%1$s — %1$s）。
 config.wearablebackpacks.general.status.required=设置“%1$s”需要首先调节这个设置。
-config.wearablebackpacks.general.status.chestplate=当关闭护甲式背包选项，此选项将无效果。[general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=背包设定
 config.wearablebackpacks.category.backpack.tooltip=普通背包的各项设定。
 config.wearablebackpacks.backpack.enabled=启用普通背包
 config.wearablebackpacks.backpack.enabled.tooltip=禁用此选项后可屏蔽所有形式的背包。
-config.wearablebackpacks.backpack.durability=背包耐久
-config.wearablebackpacks.backpack.durability.tooltip=本选项控制背包的耐久值，设定为0代表不毁。
 config.wearablebackpacks.backpack.size=存储空间
 config.wearablebackpacks.backpack.size.tooltip=本选项控制背包中格子的行数。本选项不影响已放置或已装备的背包。
 

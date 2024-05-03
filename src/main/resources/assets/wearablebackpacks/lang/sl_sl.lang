@@ -10,15 +10,13 @@ tooltip.wearablebackpacks.unequipHint=Da odložiš nahrbtnik sklonjen uporabi de
 tooltip.wearablebackpacks.used=Trenutno igraled uporablja nahrbtnik.
 
 chat.wearablebackpacks.cantEquip=Na sebi že imaš nahrbtnik.
-chat.wearablebackpacks.cantEquip.chestplate=Ne moreš pobrati nahrbtnika \n medtem, ko nosiš oklep.
+chat.wearablebackpacks.cantEquip.trinket=Ne moreš pobrati nahrbtnika \n medtem, ko nosiš oklep.
 
 key.wearablebackpacks.open=Odpri nahrbtnik.
 
 
 config.wearablebackpacks.gui.cancel=Prekliči
 
-config.wearablebackpacks.general.equipAsChestArmor=Nosi kot prsni oklep
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Kontrolira če imaš lahko prsni oklep in nahrbtnik naenkrat.
 config.wearablebackpacks.general.enableEquippedInteraction=Omogoči uporabljanje nošenega nahrbtnika
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Omogoči igralcem, da odprejo nahrbtnik, ki ga nosijo druge entitete.
 config.wearablebackpacks.general.enableSelfInteraction=Omogoči odpiraje nahrbtnika, ki ga nosiš
@@ -30,14 +28,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Odloči če se nahrb
 
 config.wearablebackpacks.general.status.outOfRange=Vrednost je izven razpona (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=Nastavitev "%1$s" je potrebna.
-config.wearablebackpacks.general.status.chestplate=Ni učinkov če je nošeno kot oklep. [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=Nastavitve Nahrbtnika
 config.wearablebackpacks.category.backpack.tooltip=Nastavitve za navadne nahrbtnike.
 config.wearablebackpacks.backpack.enabled=Vključeno
 config.wearablebackpacks.backpack.enabled.tooltip=Kontrolira če je navaden nahrbtnik Vključen.
-config.wearablebackpacks.backpack.durability=Trajnost
-config.wearablebackpacks.backpack.durability.tooltip=Kontrolira trajnost navadnega nahrbtnika (0 za neuničljivo).
 config.wearablebackpacks.backpack.size=Velikost nahrbtnika
 config.wearablebackpacks.backpack.size.tooltip=Kontrolira koliko stvari lahko das v nahrbtnik. Ne deluje za ze obstoječime nahrbtnike.
 

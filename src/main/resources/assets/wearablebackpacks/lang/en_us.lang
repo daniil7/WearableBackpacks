@@ -10,15 +10,13 @@ tooltip.wearablebackpacks.unequipHint=Sneak and right click ground\nwith empty h
 tooltip.wearablebackpacks.used=Currently being used by a player.
 
 chat.wearablebackpacks.cantEquip=You already have a backpack equipped.
-chat.wearablebackpacks.cantEquip.chestplate=You can't equip a backpack while wearing a chestplate.
+chat.wearablebackpacks.cantEquip.trinket=You can't equip a backpack while wearing a trinket in body slot.
 
 key.wearablebackpacks.open=Open Backpack
 
 
 config.wearablebackpacks.gui.cancel=Cancel
 
-config.wearablebackpacks.general.equipAsChestArmor=Equip as Chest Armor
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Controls whether equipped backpacks take up the chest armor equipment slot.
 config.wearablebackpacks.general.enableEquippedInteraction=Enable Equipped Interaction
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Controls whether players can access equipped backpacks on other players (and entities).
 config.wearablebackpacks.general.enableSelfInteraction=Enable Self Interaction
@@ -30,14 +28,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Controls whether bac
 
 config.wearablebackpacks.general.status.outOfRange=Value is out of range (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=Setting "%1$s" is required for this setting.
-config.wearablebackpacks.general.status.chestplate=No effect if not equipped as armor. [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=Backpack Settings
 config.wearablebackpacks.category.backpack.tooltip=Controls settings regarding regular backpacks.
 config.wearablebackpacks.backpack.enabled=Enabled
 config.wearablebackpacks.backpack.enabled.tooltip=Controls whether the regular backpack is enabled.
-config.wearablebackpacks.backpack.durability=Durability
-config.wearablebackpacks.backpack.durability.tooltip=Controls the durability of the regular backpack (0 for unbreakable).
 config.wearablebackpacks.backpack.size=Storage Size
 config.wearablebackpacks.backpack.size.tooltip=Controls the storage size of regular backpacks. Does not affect currently placed or equipped backpacks, turn them back into an item to apply changes.
 

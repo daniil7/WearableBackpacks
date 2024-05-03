@@ -43,7 +43,7 @@ public class BackpackCapability implements IBackpack {
 	public int lidTicks       = 0;
 	public int prevLidTicks   = 0;
 	
-	/** This is also null if the backpack is not equipped to the chestplate slot. */
+	/** This is also null if the backpack is not equipped to the boubles body slot. */
 	public IBackpackType lastType = null;
 	/** Set to a backpack registry entry if the entity is meant to be spawned with a backpack. */
 	public BackpackEntry spawnWith = null;
@@ -56,8 +56,8 @@ public class BackpackCapability implements IBackpack {
 
 	public BackpackCapability(EntityLivingBase entity) { this.entity = entity; }
 	
-	/** Returns if the entity is wearing the backpack in the chest armor slot. */
-	public boolean isChestArmor() {
+	/** Returns if the entity is wearing the backpack in the boubles body slot. */
+	public boolean isEquipped() {
 		return (lastType != null)
 			|| (BackpackHelper.getBackpackType(
 					BackpackHelper.getBodyBoubleFromEntity(entity)) != null);
@@ -68,20 +68,15 @@ public class BackpackCapability implements IBackpack {
 	@Override
 	public ItemStack getStack() {
 		if (!stack.isEmpty()) return stack;
-		ItemStack chestArmor = BackpackHelper.getBodyBoubleFromEntity(entity);
-		return ((BackpackHelper.getBackpackType(chestArmor) != null) ? chestArmor : ItemStack.EMPTY);
+		ItemStack boublesBody = BackpackHelper.getBodyBoubleFromEntity(entity);
+		return ((BackpackHelper.getBackpackType(boublesBody) != null) ? boublesBody : ItemStack.EMPTY);
 	}
 	
 	@Override
 	public void setStack(ItemStack value) {
-		boolean setChestArmor = !value.isEmpty()
-			// If backpack is being set, use equipAsChestArmor to
-			// determine whether the chest armor slot is set or not.
-			? BackpackHelper.equipAsChestArmor
-			// If being removed, use whether it actually is equipped there.
-			: isChestArmor();
+		boolean setBoublesBody = isEquipped();
 		
-		if (setChestArmor) {
+		if (setBoublesBody) {
 			stack = ItemStack.EMPTY;
 			lastType = BackpackHelper.getBackpackType(value);
 			BackpackHelper.setBodyBoubleForEntity(entity, value);
@@ -160,7 +155,7 @@ public class BackpackCapability implements IBackpack {
 				if (!compound.hasKey(TAG_TYPE, NbtType.STRING)) return;
 				// If the backpack has its type saved, restore it.
 				// This is the case when the backpack stack is equipped in
-				// the chest armor slot, which has not yet been loaded. :'(
+				// the boubles body slot, which has not yet been loaded. :'(
 				String id = compound.getString(TAG_TYPE);
 				backpack.lastType = type = BackpackHelper.getBackpackType(MiscUtils.getItemFromName(id));
 				if (type == null) return;
@@ -183,8 +178,8 @@ public class BackpackCapability implements IBackpack {
 		public NBTTagCompound serializeNBT() {
 			return NbtUtils.createCompound(
 				TAG_STACK, ((!backpack.stack.isEmpty()) ? backpack.stack.serializeNBT() : null),
-				// If the backpack is stored in the chest armor slot, we need to save the item. See deserializeNBT.
-				TAG_TYPE, (backpack.isChestArmor() ? backpack.getStack().getItem().getRegistryName().toString() : null),
+				// If the backpack is stored in the boubles body slot, we need to save the item. See deserializeNBT.
+				TAG_TYPE, (backpack.isEquipped() ? backpack.getStack().getItem().getRegistryName().toString() : null),
 				TAG_DATA, ((backpack.data != null) ? backpack.data.serializeNBT() : null),
 				TAG_MAY_DESPAWN, (backpack.mayDespawn ? (byte)1 : null));
 		}
@@ -214,7 +209,7 @@ public class BackpackCapability implements IBackpack {
 			
 			IBackpackType type;
 			if (stack.isEmpty()) {
-				// Try to get the backpack type from the chestplate slot.
+				// Try to get the backpack type from the boubles body slot.
 				stack = BackpackHelper.getBodyBoubleFromEntity(backpack.entity);
 				backpack.lastType = type = BackpackHelper.getBackpackType(stack);
 				if (type == null) return; // No backpack equipped.

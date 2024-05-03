@@ -10,15 +10,13 @@ tooltip.wearablebackpacks.unequipHint=Snig og højreklik jorden\nmed tomme hænd
 tooltip.wearablebackpacks.used=Bliver brugt af spiller.
 
 chat.wearablebackpacks.cantEquip=Du har allerede en rygsæk på.
-chat.wearablebackpacks.cantEquip.chestplate=Du kan ikke tage en rygsæk på, mens du har brystplade på.
+chat.wearablebackpacks.cantEquip.trinket=Du kan ikke tage en rygsæk på, mens du har brystplade på.
 
 key.wearablebackpacks.open=Åben rygsæk
 
 
 config.wearablebackpacks.gui.cancel=Annuller
 
-config.wearablebackpacks.general.equipAsChestArmor=Tag på som brystbeskyttelse
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Styrer om rygsække, man har på fylder armor slottet.
 config.wearablebackpacks.general.enableEquippedInteraction=Slå "Equipped Interaction" til
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Styrer om spillere kan åbne rygsække på ryggen af andre.
 config.wearablebackpacks.general.enableSelfInteraction=Slå "Self Interaction" til
@@ -28,14 +26,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Styrer om en rygsæk
 
 config.wearablebackpacks.general.status.outOfRange=Værdien er uden for rækken (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=Instilling "%1$s" er nødvending for denne.
-config.wearablebackpacks.general.status.chestplate=Ingen effekt, hvis ikke taget på som armor. [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=Rygsæk Instillinger
 config.wearablebackpacks.category.backpack.tooltip=Styrer instillinger omkring almindelig rygsække.
 config.wearablebackpacks.backpack.enabled=Slået til
 config.wearablebackpacks.backpack.enabled.tooltip=Styrer om den normale rygsæk er slået til.
-config.wearablebackpacks.backpack.durability=Holdbarhed
-config.wearablebackpacks.backpack.durability.tooltip=Styrer holdbarheden for den normale rygsæk (0 kan ikke ødelægges).
 config.wearablebackpacks.backpack.size=Opbevarelsesplads
 config.wearablebackpacks.backpack.size.tooltip=Styrer opbevarelsespladsen for normale rygsække. Ændrer ikke rygsække som allerede er på ryggen eller på jorden. Lav dem tilbage til en item for at få ændringerne med.
 

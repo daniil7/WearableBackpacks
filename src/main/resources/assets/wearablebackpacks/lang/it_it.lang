@@ -10,15 +10,13 @@ tooltip.wearablebackpacks.unequipHint=Accovacciati e premi Tasto Destro a terra\
 tooltip.wearablebackpacks.used=Attualmente usato da un altro giocatore.
 
 chat.wearablebackpacks.cantEquip=Hai già uno Zaino equipaggiato.
-chat.wearablebackpacks.cantEquip.chestplate=Non puoi equipaggiare lo Zaino se hai una corazza già equipaggiata.
+chat.wearablebackpacks.cantEquip.trinket=Non puoi equipaggiare lo Zaino se hai una corazza già equipaggiata.
 
 key.wearablebackpacks.open=Apri Zaino
 
 
 config.wearablebackpacks.gui.cancel=Annulla
 
-config.wearablebackpacks.general.equipAsChestArmor=Equipaggia come Armatura Corazza
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Imposta se lo Zaino sarà equipaggiato nello spazio della corazza.
 config.wearablebackpacks.general.enableEquippedInteraction=Permetti Interazione da altri
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Imposta se i giocatori hanno accesso agli zaini degli altri giocatori (ed entità).
 config.wearablebackpacks.general.enableSelfInteraction=Permetti Interazione quando equipaggiato
@@ -28,14 +26,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Imposta se lo Zaino 
 
 config.wearablebackpacks.general.status.outOfRange=Il valore è fuori intervallo (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=Impostare "%1$s" è richiesto per questa impostazione.
-config.wearablebackpacks.general.status.chestplate=Nessun effetto se non equipaggiato come armatura [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=Impostazioni Zaino
 config.wearablebackpacks.category.backpack.tooltip=Impostazioni riguardanti i normali zaini.
 config.wearablebackpacks.backpack.enabled=Abilitato
 config.wearablebackpacks.backpack.enabled.tooltip=Imposta se i normali zaini sono abilitati.
-config.wearablebackpacks.backpack.durability=Durabilità
-config.wearablebackpacks.backpack.durability.tooltip=Imposta la durabilità del normale zaino (0 per indistruttibile).
 config.wearablebackpacks.backpack.size=Grandezza Immagazzinamento Zaino
 config.wearablebackpacks.backpack.size.tooltip=Imposta la grandezza dell'immagazzinamento del normale zaino. Non infulenzerà gli zaini già posizionati o equipaggiati, facendoli tornare nell'inventario applicherà i cambiamenti.
 

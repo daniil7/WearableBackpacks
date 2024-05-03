@@ -33,7 +33,7 @@ public abstract class Setting<T> {
 	
 	/** The setting category, for example "general". */
 	private String _category;
-	/** The setting name, for example "equipAsChestArmor". */
+	/** The setting name, for example "dropAsBlockOnDeath". */
 	private String _name;
 	
 	/** Stores the action required after changing this setting. */
@@ -102,9 +102,9 @@ public abstract class Setting<T> {
 	
 	/** Returns the setting's category, for example "general". */
 	public String getCategory() { return _category; }
-	/** Returns the setting's name, for example "equipAsChestArmor". */
+	/** Returns the setting's name, for example "dropAsBlockOnDeath". */
 	public String getName() { return _name; }
-	/** Returns the setting's full name, for example "general.equipAsChestArmor". */
+	/** Returns the setting's full name, for example "general.dropAsBlockOnDeath". */
 	public String getFullName() { return _category + "." + _name; }
 	
 	/** Returns the setting's default value. */

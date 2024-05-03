@@ -10,15 +10,13 @@ tooltip.wearablebackpacks.unequipHint=Kucnij i kliknij prawym przyciskiem na zie
 tooltip.wearablebackpacks.used=Obecnie używany przez gracza.
 
 chat.wearablebackpacks.cantEquip=Masz już założony plecak.
-chat.wearablebackpacks.cantEquip.chestplate=Nie możesz założyć plecaka mając na sobie napierśnik.
+chat.wearablebackpacks.cantEquip.trinket=Nie możesz założyć plecaka mając na sobie napierśnik.
 
 key.wearablebackpacks.open=Otwórz Plecak
 
 
 config.wearablebackpacks.gui.cancel=Anuluj
 
-config.wearablebackpacks.general.equipAsChestArmor=Załóż jako napierśnik
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Kontroluje, czy założone plecaki zabierają slot na napierśnik.
 config.wearablebackpacks.general.enableEquippedInteraction=Włącz interakcję z założonym na innym graczu plecakiem.
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Kontroluje, czy gracze mają dostęp do plecaków noszonych przez innych graczy (i moby).
 config.wearablebackpacks.general.enableSelfInteraction=Włącz interakcję z założonym na sobie plecakiem.
@@ -30,14 +28,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Kontroluje, czy plec
 
 config.wearablebackpacks.general.status.outOfRange=Wartość nie mieści się w granicach (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=Ustawienie "%1$s" jest wymagane przez te ustawienie.
-config.wearablebackpacks.general.status.chestplate=Brak efektu gdy nie założone jako zbroja. [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=Ustawienia plecaka
 config.wearablebackpacks.category.backpack.tooltip=Ustawienia dotyczące zwykłych plecaków.
 config.wearablebackpacks.backpack.enabled=Włączone
 config.wearablebackpacks.backpack.enabled.tooltip=Kontroluje, czy zwykłe plecaki są włączone.
-config.wearablebackpacks.backpack.durability=Wytrzymałość
-config.wearablebackpacks.backpack.durability.tooltip=Kontroluje wytrzymałość zwykłych plecaków (0 oznacza niezniczalne).
 config.wearablebackpacks.backpack.size=Wielkość inwentarza
 config.wearablebackpacks.backpack.size.tooltip=Kontroluje rozmiar ekwipunku zwykłych plecaków. Nie ma efektu na obecnie postawionych lub noszonych plecakach, zmień je spowrotem w przedmiot.
 

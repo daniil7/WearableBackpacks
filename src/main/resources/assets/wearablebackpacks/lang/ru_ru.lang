@@ -10,14 +10,12 @@ tooltip.wearablebackpacks.unequipHint=Присесть и правый клик 
 tooltip.wearablebackpacks.used=Уже используется другим игроком.
 
 chat.wearablebackpacks.cantEquip=На вас уже надет другой рюкзак.
-chat.wearablebackpacks.cantEquip.chestplate=Вы не можете надеть рюкзак одновременно с бронёй.
+chat.wearablebackpacks.cantEquip.trinket=Вы не можете надеть рюкзак одновременно с другой безделушкой.
 
 key.wearablebackpacks.open=Открыть рюкзак
 
 config.wearablebackpacks.gui.cancel=Отмена
 
-config.wearablebackpacks.general.equipAsChestArmor=Надевать как нагрудную броню
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Разрешает надевать рюкзак в слот для брони.
 config.wearablebackpacks.general.enableEquippedInteraction=Разрешить взаимодействие с другими
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Разрешает игрокам открывать рюкзаки надетые на других игроков (и мобов).
 config.wearablebackpacks.general.enableSelfInteraction=Разрешить взаимодействие с собой
@@ -27,14 +25,10 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Разрешает �
 
 config.wearablebackpacks.general.status.outOfRange=Значение выходит за диапазон (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=Для этого параметра требуется установка "%1$s".
-config.wearablebackpacks.general.status.chestplate=Не действует, если не надето в слот брони. [general.equipAsChestArmor = false]
-
 config.wearablebackpacks.category.backpack=Настройки рюкзака
 config.wearablebackpacks.category.backpack.tooltip=Управляет настройками обычных рюкзаков.
 config.wearablebackpacks.backpack.enabled=Разрешено
 config.wearablebackpacks.backpack.enabled.tooltip=Разрешает рюкзаки.
-config.wearablebackpacks.backpack.durability=Прочность
-config.wearablebackpacks.backpack.durability.tooltip=Задаёт прочность рюкзака (0 - неразрушимый).
 config.wearablebackpacks.backpack.size=Вместимость
 config.wearablebackpacks.backpack.size.tooltip=Задаёт вместимость рюкзака. Не влияет на уже существующие поставленные или надетые рюкзаки, нужно взять в руки для изменения.
 

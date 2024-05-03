@@ -113,11 +113,7 @@ public class ItemBackpack extends Item implements IBauble, IBackpackType, IDyeab
 	
 	@Override
 	public boolean isEnchantable(ItemStack stack) {
-		// Only enchantable if backpack is equipped as chest armor.
-		// Otherwise unbreaking and protection enchantments are useless.
-		return BackpackHelper.equipAsChestArmor;
-		// Also needs to be overridden because otherwise 0
-		// durability considers the backpack unenchantable.
+		return false;
 	}
 	
 	@Override
@@ -133,20 +129,18 @@ public class ItemBackpack extends Item implements IBauble, IBackpackType, IDyeab
 		// If the shift key is held down, display equip / unequip hints,
 		// otherwise just display "Hold SHIFT for more info" message.
 		if (LangUtils.tooltipIsShiftKeyDown(tooltip)) {
-			boolean equipAsChestArmor = WearableBackpacks.CONFIG.equipAsChestArmor.get();
 			boolean enableSelfInteraction = WearableBackpacks.CONFIG.enableSelfInteraction.get();
 			
 			// If own backpacks can be interacted with while equipped and one is either
-			// currently equipped or won't be equipped as chest armor, display open hint.
+			// currently equipped or won't be equipped as boubles body item, display open hint.
 			// Does not display anything if key is unbound.
-			if (enableSelfInteraction && (isEquipped || !equipAsChestArmor))
+			if (enableSelfInteraction && isEquipped)
 				LangUtils.formatTooltipKey(tooltip, "openHint", KeyBindingHandler.openBackpack);
 			
 			// If the backpack is the player's currently equipped backpack, display unequip hint.
 			if (isEquipped) LangUtils.formatTooltip(tooltip, "unequipHint");
-			// If not equipped, display the equip hint. If equipAsChestArmor is off,
-			// use extended tooltip, which also explains how to unequip the backpack.
-			else LangUtils.formatTooltip(tooltip, "equipHint" + (!equipAsChestArmor ? ".extended" : ""));
+			// If not equipped, display the equip hint.
+			else LangUtils.formatTooltip(tooltip, "equipHint");
 		}
 		
 		// If someone's using the player's backpack right now, display it in the tooltip.
@@ -265,16 +259,6 @@ public class ItemBackpack extends Item implements IBauble, IBackpackType, IDyeab
 		return new BackpackDataItems(size);
 	}
 	
-	// When changing the maximum backpack durability in WBs' config to 0,
-	// any already damaged backpacks would simply turn invalid due to their
-	// damage value being above zero.
-	// 
-	// This little hack makes it so when durability is set to 0, it fakes
-	// the durability to be very high, instead. And any attempt to get or
-	// set damage will simply return or set it to 0.
-	
-	// TODO: This won't work with multiple backpack types. Somehow associate item with backpack category?
-	
 	@Override
 	public boolean isDamageable()
 		{ return !isInvulnurable(); }
@@ -296,6 +280,5 @@ public class ItemBackpack extends Item implements IBauble, IBackpackType, IDyeab
 	
 	/** Returns if this backpack can't be damaged. */
 	private boolean isInvulnurable()
-		{ return (WearableBackpacks.CONFIG.backpack.durability.get() == 0); }
-	
+		{ return true; }
 }

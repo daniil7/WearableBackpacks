@@ -52,7 +52,7 @@ public interface IBackpackType {
 	void onEquippedBroken(EntityLivingBase entity, IBackpack backpack);
 	
 	/** Called when the backpack is removed from the
-	 *  chestplate slot by means it's not supposed to. */
+	 *  baubles body slot by means it's not supposed to. */
 	void onFaultyRemoval(EntityLivingBase entity, IBackpack backpack);
 	
 	/** Called when this backpack is broken when placed down. */

@@ -10,15 +10,13 @@ tooltip.wearablebackpacks.unequipHint=Pokrč sa a klikni pravym na zem\ns prazdn
 tooltip.wearablebackpacks.used=Momentálne je používaný hráčom.
 
 chat.wearablebackpacks.cantEquip=Už máš nasadený ruksak!.
-chat.wearablebackpacks.cantEquip.chestplate=Nemôžeš si nasadiť ruksak, pokiaľ máš na sebe Chestplate.
+chat.wearablebackpacks.cantEquip.trinket=Nemôžeš si nasadiť ruksak, pokiaľ máš na sebe Chestplate.
 
 key.wearablebackpacks.open=Otvoriť ruksak
 
 
 config.wearablebackpacks.gui.cancel=Zrušiť
 
-config.wearablebackpacks.general.equipAsChestArmor=Nasadiť ako Hrudníkové Brnenie
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Ovláda či nasadený ruksak zaberá slot brnenie alebo nie.
 config.wearablebackpacks.general.enableEquippedInteraction=Zapnúť Interakciu pri Nasadení
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Ovláda či hráč môže pristupovať do nasadeného ruksaku ostatných hráčov (a entít).
 config.wearablebackpacks.general.enableSelfInteraction=Zapnúť Interakciu so Samým Sebou
@@ -30,14 +28,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Ovláda či sa ruksa
 
 config.wearablebackpacks.general.status.outOfRange=Hodnota je mimo rozsahu (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=Nastavenie "%1$s" je potrebné pre toto nastavenie.
-config.wearablebackpacks.general.status.chestplate=Žiadny efekt ak nie je nasadený v slote Brnenia. [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=Možnosti Ruksaku
 config.wearablebackpacks.category.backpack.tooltip=Ovláda nastavenia týkajúce sa klasických ruksakov.
 config.wearablebackpacks.backpack.enabled=Povolené
 config.wearablebackpacks.backpack.enabled.tooltip=Ovláda či je klasický ruksak Povolený.
-config.wearablebackpacks.backpack.durability=Výdrž
-config.wearablebackpacks.backpack.durability.tooltip=Ovláda výdrž klasického ruksaku. (0 pre nezničiteľný).
 config.wearablebackpacks.backpack.size=Veľkosť úložného priestoru
 config.wearablebackpacks.backpack.size.tooltip=Ovláda úložný priestor klasického ruksaku. Neovplyvni už položené alebo nasadené ruksaky, zmeň ich znova na item pre aplikovanie zmien.
 

@@ -10,15 +10,13 @@ tooltip.wearablebackpacks.unequipHint=Sluit en rechtsklik de grond\nmet een lege
 tooltip.wearablebackpacks.used=Momenteel in gebruik door een speler.
 
 chat.wearablebackpacks.cantEquip=Je bent al uitgerust met een rugzak.
-chat.wearablebackpacks.cantEquip.chestplate=Je kunt een rugzak niet aandoen terwijl je al een borsplaat draagt.
+chat.wearablebackpacks.cantEquip.trinket=Je kunt een rugzak niet aandoen terwijl je al een borsplaat draagt.
 
 key.wearablebackpacks.open=Open Rugzak
 
 
 config.wearablebackpacks.gui.cancel=Cancel
 
-config.wearablebackpacks.general.equipAsChestArmor=Draag het als een Borstplaat
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Bepaald of gedragen rugzakken de lichaam harnas slot inneemt of niet.
 config.wearablebackpacks.general.enableEquippedInteraction=Schakel Uitgeruste Interactie in
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Bepaald of spelers toegang hebben op de uitgeruste rugzakken van andere spelers (en entiteiten).
 config.wearablebackpacks.general.enableSelfInteraction=Schakel Zelf Interactie in
@@ -28,14 +26,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Bepaalt of rugzakken
 
 config.wearablebackpacks.general.status.outOfRange=Waarde is niet toegestaan (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=De instelling "%1$s" is vereist voor deze instelling.
-config.wearablebackpacks.general.status.chestplate=Geen effect indien niet uitgerust als harnas. [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=Rugzak Instellingen
 config.wearablebackpacks.category.backpack.tooltip=Bepaalt de instellingen van normale rugzakken.
 config.wearablebackpacks.backpack.enabled=Ingeschakeld
 config.wearablebackpacks.backpack.enabled.tooltip=Bepaalt of de normale rugzak is ingeschakeld.
-config.wearablebackpacks.backpack.durability=Duurzaamheid
-config.wearablebackpacks.backpack.durability.tooltip=Regelt de duurzaamheid van de normale rugzak (0 voor onbreekbaar).
 config.wearablebackpacks.backpack.size=Opslag Grootte
 config.wearablebackpacks.backpack.size.tooltip=Bepaalt de opslag grootte van normale rugzakken. Heeft geen invloed op geplaatste of uitgeruste rugzakken.
 

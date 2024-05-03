@@ -10,14 +10,12 @@ tooltip.wearablebackpacks.unequipHint=Agache-se e clique com o botão direito no
 tooltip.wearablebackpacks.used=Está em uso por um(a) jogador(a) no momento.
 
 chat.wearablebackpacks.cantEquip=Você já está levando uma mochila.
-chat.wearablebackpacks.cantEquip.chestplate=Não é possível carregar uma mochila enquanto estiver com um peitoral.
+chat.wearablebackpacks.cantEquip.trinket=Não é possível carregar uma mochila enquanto estiver com um peitoral.
 
 key.wearablebackpacks.open=Abrir mochila
 
 config.wearablebackpacks.gui.cancel=Cancelar
 
-config.wearablebackpacks.general.equipAsChestArmor=Carregar como armadura frontal
-config.wearablebackpacks.general.equipAsChestArmor.tooltip=Carregar mochilas ocupando o espaço do equipamento de armadura frontal.
 config.wearablebackpacks.general.enableEquippedInteraction=Permitir interações
 config.wearablebackpacks.general.enableEquippedInteraction.tooltip=Permitir que jogadores possam acessar as mochilas levadas por outros jogadores e/ou entidades.
 config.wearablebackpacks.general.enableSelfInteraction=Permitir autointerações
@@ -29,14 +27,11 @@ config.wearablebackpacks.general.dropAsBlockOnDeath.tooltip=Largar as mochilas a
 
 config.wearablebackpacks.general.status.outOfRange=O valor está fora do intervalo (%1$s - %1$s).
 config.wearablebackpacks.general.status.required=A configuração "%1$s" é necessária para esta opção.
-config.wearablebackpacks.general.status.chestplate=Não há efeito se não estiver sendo levada como armadura. [general.equipAsChestArmor = false]
 
 config.wearablebackpacks.category.backpack=Opções da mochila
 config.wearablebackpacks.category.backpack.tooltip=Alterar configurações de mochilas comuns.
 config.wearablebackpacks.backpack.enabled=Ativada
 config.wearablebackpacks.backpack.enabled.tooltip=Ativar/Desativar o uso de mochilas comuns.
-config.wearablebackpacks.backpack.durability=Durabilidade
-config.wearablebackpacks.backpack.durability.tooltip=Alterar a durabilidade de mochilas comuns (0 para inquebrabilidade).
 config.wearablebackpacks.backpack.size=Tam. de armazenamento
 config.wearablebackpacks.backpack.size.tooltip=Mudar o tamanho de armazenamento de mochilas comuns. Isso não afeta mochilas carregadas ou não levadas. Deixe-as de volta como itens para aplicar as alterações.
 

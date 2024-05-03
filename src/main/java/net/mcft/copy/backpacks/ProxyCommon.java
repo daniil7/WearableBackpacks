@@ -196,7 +196,7 @@ public class ProxyCommon {
 			onSpawnedWith(entity, backpack, backpack.spawnWith);
 		boolean hasBackpack = !backpack.getStack().isEmpty();
 
-		if (backpack.isChestArmor()) {
+		if (backpack.isEquipped()) {
 
 			// There was a logic that prevents unexpacted unequipping.
 			// Now Baubles care about this. There was a conflict with boubles logic.

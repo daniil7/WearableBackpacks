@@ -21,7 +21,7 @@ option unlike any other!
   ![](docs/picture_1.png)
 
 - **Armor up, or storage up?**
-  With the default settings, backpacks will function as armor, taking up the chest armor
+  With the default settings, backpacks will function as armor, taking up the boubles body
   equipment slot, protecting from as well as taking damage just like leather armor. This
   way, you have to *choose* between more protection or more storage. This can be turned
   off though, in case you don't like it.
@@ -57,7 +57,7 @@ option unlike any other!
 
 ## Usage
 
-Think of **Wearable Backpacks** backpacks as portable, wearable chests. After you've
+Think of **Wearable Backpacks** backpacks as portable, wearable trinket. After you've
 crafted one, simply place it on the ground and fill it with whatever you'd like to take
 with you. Next, **sneak** and **break** the backpack to **equip** it. You'll notice that
 equipping is faster than breaking.

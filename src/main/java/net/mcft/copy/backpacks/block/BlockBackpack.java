@@ -138,7 +138,7 @@ public class BlockBackpack extends BlockContainer {
 		if (world.isRemote && player.isSneaking() && !BackpackHelper.canEquipBackpack(player) &&
 		    (System.currentTimeMillis() > _lastHelpMessage + 10 * 1000)) {
 			boolean backpack = (BackpackHelper.getBackpack(player) != null);
-			LangUtils.displayChatMessage("cantEquip" + (!backpack ? ".chestplate" : ""));
+			LangUtils.displayChatMessage("cantEquip" + (!backpack ? ".trinket" : ""));
 			_lastHelpMessage = System.currentTimeMillis();
 		}
 	}
