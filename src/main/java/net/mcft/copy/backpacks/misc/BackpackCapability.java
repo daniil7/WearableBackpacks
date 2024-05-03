@@ -59,8 +59,7 @@ public class BackpackCapability implements IBackpack {
 	/** Returns if the entity is wearing the backpack in the boubles body slot. */
 	public boolean isEquipped() {
 		return (lastType != null)
-			|| (BackpackHelper.getBackpackType(
-					BackpackHelper.getBodyBoubleFromEntity(entity)) != null);
+			|| (BackpackHelper.getBackpackType(BackpackHelper.getBodyBoubleFromEntity(entity)) != null);
 	}
 	
 	// IBackpack implementation
@@ -74,7 +73,7 @@ public class BackpackCapability implements IBackpack {
 	
 	@Override
 	public void setStack(ItemStack value) {
-		boolean setBoublesBody = isEquipped();
+		boolean setBoublesBody = value.isEmpty() || !isEquipped();
 		
 		if (setBoublesBody) {
 			stack = ItemStack.EMPTY;

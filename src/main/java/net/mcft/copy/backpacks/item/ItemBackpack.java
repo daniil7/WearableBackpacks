@@ -123,7 +123,7 @@ public class ItemBackpack extends Item implements IBauble, IBackpackType, IDyeab
 			// If the backpack is the player's currently equipped backpack, display unequip hint.
 			if (isEquipped) LangUtils.formatTooltip(tooltip, "unequipHint");
 			// If not equipped, display the equip hint.
-			else LangUtils.formatTooltip(tooltip, "equipHint");
+			else LangUtils.formatTooltip(tooltip, "equipHint.extended");
 		}
 		
 		// If someone's using the player's backpack right now, display it in the tooltip.
